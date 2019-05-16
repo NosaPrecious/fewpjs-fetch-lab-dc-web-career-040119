@@ -1,8 +1,7 @@
 function fetchBooks() {
-  let fetchObj= fetch('https://anapioficeandfire.com/api/books').then(response => response.json());
-  debugger
-  //.then(renderBooks);
-
+  return fetch("https://anapioficeandfire.com/api/books")
+    .then(resp => resp.json())
+    .then(json => renderBooks(json))
 }
 
 function renderBooks(json) {
